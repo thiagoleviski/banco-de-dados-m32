@@ -1,0 +1,9 @@
+- Nas mesmas buscas do exercício anterior, traga apenas o número do resultado usando o contador
+
+db.biblioteca.find({$and: [{status: {$ne: 'PUBLISH'}, pageCount: {$lt: 300}}]}).count()
+
+db.biblioteca.find({title: {$regex: /MongoDB|SQL Server/}}).count()
+
+db.biblioteca.find({isbn: {$regex: /^18/}}).count()
+
+db.biblioteca.find({longDescription: {$regex: /.ava|.obile/}}).count()
